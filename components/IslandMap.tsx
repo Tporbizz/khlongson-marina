@@ -4,18 +4,8 @@ import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IMG } from "@/lib/images";
+import { NEARBY_ISLANDS } from "@/content/marina";
 import { Maximize2, X } from "lucide-react";
-
-const ISLANDS = [
-  { name: "Ko Ngai", nm: "9.7 NM", time: "16 min" },
-  { name: "Ko Mook · Emerald Cave", nm: "10.8 NM", time: "18 min" },
-  { name: "Ko Lanta", nm: "12.4 NM", time: "21 min" },
-  { name: "Ko Kradan", nm: "14.6 NM", time: "24 min" },
-  { name: "Ko Libong 🐚", nm: "18.9 NM", time: "31 min" },
-  { name: "Ko Rok 🤿", nm: "23.8 NM", time: "40 min" },
-  { name: "Ko Ha", nm: "26.5 NM", time: "44 min" },
-  { name: "Langkawi 🇲🇾", nm: "~60 NM", time: "south" },
-];
 
 export default function IslandMap() {
   const [open, setOpen] = useState(false);
@@ -24,11 +14,11 @@ export default function IslandMap() {
       <div className="container-edge max-w-6xl">
         <div className="text-center max-w-2xl mx-auto mb-8">
           <h2 className="heading-lg text-[var(--color-gold)]">
-            9 World-Class Islands Within 30 NM
+            World-Class Islands Within Reach
           </h2>
           <p className="text-white/60 mt-3">
-            All uncrowded. No charter-fleet pressure. Accessible by speedboat in
-            under an hour.
+            Eleven destinations within a day&apos;s sail. All uncrowded, no
+            charter-fleet pressure, accessible by speedboat in under an hour.
           </p>
         </div>
 
@@ -50,9 +40,9 @@ export default function IslandMap() {
           </div>
         </button>
 
-        {/* Island distance grid */}
+        {/* Island distance grid — 11 destinations from NEARBY_ISLANDS */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mt-8">
-          {ISLANDS.map((island) => (
+          {NEARBY_ISLANDS.map((island) => (
             <div
               key={island.name}
               className="rounded-lg border border-[var(--color-gold)]/20 bg-white/5 p-3 hover:border-[var(--color-gold)]/40 transition-colors"
@@ -61,10 +51,10 @@ export default function IslandMap() {
                 {island.name}
               </div>
               <div className="text-[var(--color-gold)] text-lg font-bold mt-1">
-                {island.nm}
+                {typeof island.nm === "number" ? `${island.nm} NM` : island.nm}
               </div>
               <div className="text-white/40 text-xs">
-                {island.time === "south" ? "south by sail" : `${island.time} by speedboat`}
+                {island.min ? `${island.min} min by speedboat` : "south by sail"}
               </div>
             </div>
           ))}

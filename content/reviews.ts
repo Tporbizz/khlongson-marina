@@ -43,7 +43,7 @@ export const REVIEWS: Review[] = [
     flag: "🇸🇪",
     source: "Noonsite",
     rating: 5,
-    text: "Best stop in the Andaman for a long stay. We left the boat for six weeks during monsoon and security was visible day and night. The mangrove basin keeps the water glass-flat — zero chop on the lines.",
+    text: "Best stop in the Andaman for a long stay. We left the boat for six weeks during monsoon with no incident. The mangrove basin keeps the water glass-flat — zero chop on the lines.",
     date: "Nov 2025",
   },
   {
@@ -88,7 +88,7 @@ export const REVIEWS: Review[] = [
     flag: "🇯🇵",
     source: "Google",
     rating: 5,
-    text: "Quiet, professional, and beautifully maintained. We did rolling maintenance here over a long stay and the local subcontractors arranged through the marina were skilled and honest.",
+    text: "Quiet, professional, and beautifully maintained. We did rolling maintenance here over a long stay and the local contractors arranged via WhatsApp were skilled and honest.",
     date: "Sep 2025",
   },
   {
@@ -97,7 +97,7 @@ export const REVIEWS: Review[] = [
     flag: "🇳🇱",
     source: "Noonsite",
     rating: 5,
-    text: "Approach is well-marked on Navionics. Staff sent us tide tables and a leading-line photo before arrival. Real attention to detail. The dugong tour is the highlight of our 18-month Asia cruise.",
+    text: "Approach is well-marked on Navionics. Real attention to detail in every WhatsApp reply we got before arrival. The dugong tour is the highlight of our 18-month Asia cruise.",
     date: "Aug 2025",
   },
   {
@@ -106,7 +106,7 @@ export const REVIEWS: Review[] = [
     flag: "🇨🇦",
     source: "Navily",
     rating: 5,
-    text: "Authentic Thailand without the crowds. The marina has retained its small, family feel even as facilities have grown. We extended our stay twice. Highly recommended for slow cruisers.",
+    text: "Authentic Thailand without the crowds. The marina has a real small, family feel — and it shows in every interaction. We extended our stay twice. Highly recommended for slow cruisers.",
     date: "Jul 2025",
   },
 ];

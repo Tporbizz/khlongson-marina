@@ -28,14 +28,15 @@ export type BerthingRate = {
   thbDay?: number;       // บาท/วัน
   eurDay?: number;       // €/วัน
   thbWeek?: number;      // บาท/สัปดาห์ (rate × 7 ลด)
+  thbMonth?: number;     // บาท/เดือน (long-stay)
   note?: string;         // ใช้กับ Catamaran row ที่เป็น × multiplier
 };
 
 export const BERTHING_RATES: BerthingRate[] = [
-  { loa: "Up to 10 m", thbDay: 500, eurDay: 14, thbWeek: 2700 },
-  { loa: "10 m – 15 m", thbDay: 900, eurDay: 24, thbWeek: 4900 },
-  { loa: "15 m – 20 m", thbDay: 1300, eurDay: 35, thbWeek: 7000 },
-  { loa: "20 m – 25 m", thbDay: 1800, eurDay: 49, thbWeek: 9700 },
+  { loa: "Up to 10 m", thbDay: 500, eurDay: 14, thbWeek: 2700, thbMonth: 18000 },
+  { loa: "10 m – 15 m", thbDay: 900, eurDay: 24, thbWeek: 4900, thbMonth: 22000 },
+  { loa: "15 m – 20 m", thbDay: 1300, eurDay: 35, thbWeek: 7000, thbMonth: 26000 },
+  { loa: "20 m – 25 m", thbDay: 1800, eurDay: 49, thbWeek: 9700, thbMonth: 32000 },
   { loa: "Catamaran", note: "Rate × 1.2 of monohull tier" },
 ];
 

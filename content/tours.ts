@@ -37,7 +37,7 @@ export const TOURS: Tour[] = [
     title: "Emerald Cave & Ko Mook",
     duration: "Full day · 8 hours",
     price: "Quote on request",
-    image: IMG.marinaAerial,
+    image: IMG.estuary,
     highlights: [
       "Swim through the 80-meter sea cave (mornings)",
       "Hidden lagoon beach picnic",

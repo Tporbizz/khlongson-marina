@@ -3,6 +3,7 @@
  * ------------------------------------------------------------
  * Categories: "Aerial" | "Facilities" | "Tours" | "Vision"
  * ใช้ /images/xxx ใน public/ เท่านั้น (no external hosts).
+ * ทุกไฟล์รูปจริง โผล่ครั้งเดียว (no duplicates).
  * ============================================================ */
 
 const MANGROVE_LONG =
@@ -16,16 +17,12 @@ export type GalleryItem = {
 };
 
 export const GALLERY: GalleryItem[] = [
-  { id: "g1",  src: "/images/Drone1.jpg", alt: "Aerial of pier and mangrove at golden hour",       category: "Aerial" },
-  { id: "g2",  src: "/images/Drone2.jpg", alt: "Pier close-up with mangrove backdrop",              category: "Aerial" },
-  { id: "g3",  src: "/images/Drone4.jpg", alt: "Drone shot of yachts berthed in the river basin",  category: "Aerial" },
-  { id: "g4",  src: "/images/Drone5.jpg", alt: "Wide aerial of the Khlong Sikao estuary",          category: "Aerial" },
-  { id: "g5",  src: MANGROVE_LONG,        alt: "Calm tropical mangrove water close-up",            category: "Tours" },
-  { id: "g6",  src: "/images/MArina 3D.png", alt: "Phase 2 marina masterplan render",              category: "Vision" },
-  { id: "g7",  src: "/images/Club House.png", alt: "Phase 2 clubhouse concept render",             category: "Vision" },
-  { id: "g8",  src: "/images/Drone1.jpg", alt: "Approach into the Khlong Sikao river",             category: "Tours" },
-  { id: "g9",  src: "/images/Drone2.jpg", alt: "Concrete T-shape pier from above",                 category: "Facilities" },
-  { id: "g10", src: "/images/Drone4.jpg", alt: "Marina basin with anchored yachts",                category: "Facilities" },
-  { id: "g11", src: "/images/Drone5.jpg", alt: "Mangrove channel approach from open sea",          category: "Tours" },
-  { id: "g12", src: MANGROVE_LONG,        alt: "Mirror-still water inside the basin",              category: "Tours" },
+  { id: "g1", src: "/images/Drone1.jpg",        alt: "Aerial of pier and mangrove at golden hour",   category: "Aerial" },
+  { id: "g2", src: "/images/Drone2.jpg",        alt: "Concrete T-shape pier from above",             category: "Facilities" },
+  { id: "g3", src: "/images/Drone4.jpg",        alt: "Yachts berthed in the protected river basin",  category: "Aerial" },
+  { id: "g4", src: "/images/Drone5.jpg",        alt: "Wide aerial of the Khlong Sikao estuary",      category: "Aerial" },
+  { id: "g5", src: MANGROVE_LONG,               alt: "Calm mangrove water close-up",                 category: "Tours" },
+  { id: "g6", src: "/images/50905-35917.jpeg",  alt: "Longtail boats on a turquoise Trang beach",    category: "Tours" },
+  { id: "g7", src: "/images/MArina 3D.png",     alt: "Phase 2 marina masterplan render",             category: "Vision" },
+  { id: "g8", src: "/images/Club House.png",    alt: "Phase 2 club house concept render",            category: "Vision" },
 ];

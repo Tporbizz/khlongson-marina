@@ -88,14 +88,15 @@ export default function BerthingPage() {
           </div>
 
           <ScrollReveal>
-            <div className="overflow-hidden rounded-[var(--radius-lg)] border border-[var(--color-silver-200)] shadow-xl shadow-[var(--color-navy)]/5 bg-white">
-              <table className="w-full text-sm">
+            <div className="overflow-x-auto rounded-[var(--radius-lg)] border border-[var(--color-silver-200)] shadow-xl shadow-[var(--color-navy)]/5 bg-white">
+              <table className="w-full text-sm min-w-[640px]">
                 <thead className="bg-[var(--color-navy)] text-white">
                   <tr>
                     <th className="text-left p-4 font-medium tracking-wide">LOA</th>
                     <th className="text-right p-4 font-medium tracking-wide">THB / day</th>
                     <th className="text-right p-4 font-medium tracking-wide">EUR / day</th>
                     <th className="text-right p-4 font-medium tracking-wide">THB / week</th>
+                    <th className="text-right p-4 font-medium tracking-wide">THB / month</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -108,7 +109,7 @@ export default function BerthingPage() {
                         {r.loa}
                       </td>
                       {r.note ? (
-                        <td className="p-4 text-right text-[var(--color-navy-800)]/65 italic" colSpan={3}>
+                        <td className="p-4 text-right text-[var(--color-navy-800)]/65 italic" colSpan={4}>
                           {r.note}
                         </td>
                       ) : (
@@ -119,8 +120,11 @@ export default function BerthingPage() {
                           <td className="p-4 text-right text-[var(--color-navy-800)]/75">
                             €{r.eurDay}
                           </td>
-                          <td className="p-4 text-right text-[var(--color-gold-dark)] font-medium">
+                          <td className="p-4 text-right text-[var(--color-gold-dark)]">
                             ฿{r.thbWeek?.toLocaleString()}
+                          </td>
+                          <td className="p-4 text-right text-[var(--color-gold-dark)] font-medium">
+                            ฿{r.thbMonth?.toLocaleString()}
                           </td>
                         </>
                       )}
@@ -130,6 +134,15 @@ export default function BerthingPage() {
               </table>
             </div>
           </ScrollReveal>
+
+          <p className="mt-4 text-sm text-[var(--color-navy-800)]/70 max-w-2xl">
+            Monthly rates available on request — WhatsApp for long-stay packages.
+          </p>
+
+          <div className="mt-4 rounded-[var(--radius-md)] border border-[var(--color-gold)]/40 bg-[var(--color-gold)]/10 px-4 py-3 max-w-2xl text-sm text-[var(--color-navy-800)]">
+            <strong className="font-medium text-[var(--color-navy)]">Vessels over 15 m:</strong>{" "}
+            tidal entry required. WhatsApp 24 hrs ahead for your tide window.
+          </div>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
             <a
