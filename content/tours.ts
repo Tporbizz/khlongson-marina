@@ -49,7 +49,7 @@ export const TOURS: Tour[] = [
     title: "4 Islands Private Charter",
     duration: "Full day · 9 hours",
     price: "Quote on request",
-    image: IMG.yachtsMangrove,
+    image: "/images/50905-35917.jpeg",
     highlights: [
       "Ko Mook · Ko Kradan · Ko Ngai · Ko Liang",
       "Fresh local seafood arranged on request",
