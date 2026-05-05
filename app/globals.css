@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand palette — Khlong Son "Sheltered Wave" board (canonical) */
+
+  /* Deep Atlantic Navy */
+  --color-navy: #0d2c4d;
+  --color-navy-50: #e7ecf2;
+  --color-navy-100: #c1cdda;
+  --color-navy-200: #8499b5;
+  --color-navy-300: #4a6a8d;
+  --color-navy-700: #0d2c4d;
+  --color-navy-800: #0a2240;
+  --color-navy-900: #061830;
+
+  /* Brushed Silver */
+  --color-silver: #c4ccd2;
+  --color-silver-100: #ebeef1;
+  --color-silver-200: #d6dce0;
+  --color-silver-300: #a9b3bb;
+
+  /* Champagne Gold */
+  --color-gold: #cfa978;
+  --color-gold-light: #e2c39a;
+  --color-gold-dark: #a87f4f;
+
+  /* Moss Green — secondary accent on the brand board */
+  --color-moss: #5a7541;
+  --color-moss-light: #7c9762;
+  --color-moss-dark: #3d532b;
+
+  /* Cream — subtle, slightly warm, off-white */
+  --color-cream: #f6f2ea;
+  --color-cream-100: #ece6d8;
+
+  /* Fonts (mapped to next/font CSS variables) */
+  --font-display: var(--font-display-google), "Playfair Display", serif;
+  --font-body: var(--font-body-google), "Inter", system-ui, sans-serif;
+
+  /* Spacing & radius */
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-navy-900);
+    font-family: var(--font-body);
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+    color: var(--color-navy);
+  }
+
+  ::selection {
+    background-color: var(--color-gold);
+    color: var(--color-navy-900);
+  }
+
+  /* Subtle anchor focus ring with brand colour */
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  .container-edge {
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .container-edge { padding-inline: 2rem; }
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.6rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    border-radius: var(--radius-sm);
+    transition: transform 200ms ease, background-color 200ms ease, color 200ms ease, box-shadow 200ms ease;
+    will-change: transform;
+  }
+
+  .btn:hover { transform: translateY(-1px); }
+
+  .btn-primary {
+    background-color: var(--color-gold);
+    color: var(--color-navy-900);
+    box-shadow: 0 10px 30px -12px rgba(212, 175, 135, 0.55);
+  }
+  .btn-primary:hover { background-color: var(--color-gold-light); }
+
+  .btn-ghost {
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  .btn-ghost:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: white;
+  }
+
+  .btn-navy {
+    background-color: var(--color-navy);
+    color: white;
+  }
+  .btn-navy:hover { background-color: var(--color-navy-800); }
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-gold-dark);
+  }
+
+  .heading-xl {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5.5vw, 4.75rem);
+    line-height: 1.05;
+    font-weight: 500;
+  }
+
+  .heading-lg {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 3.6vw, 3rem);
+    line-height: 1.1;
+    font-weight: 500;
+  }
+
+  .heading-md {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 2.4vw, 2rem);
+    line-height: 1.2;
+    font-weight: 500;
+  }
+
+  .glass {
+    background-color: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+  }
+
+  .card {
+    background-color: white;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(12, 53, 80, 0.08);
+    transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 30px 60px -30px rgba(12, 53, 80, 0.25);
+    border-color: rgba(212, 175, 135, 0.4);
+  }
+
+  .divider-gold {
+    width: 56px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-gold), transparent);
+    margin: 1rem 0;
+  }
+}
+
+/* Leaflet container needs a defined height */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  font-family: var(--font-body);
+  background-color: #d8e7ee;
+}
+
+/* Hide default Leaflet attribution box border for a cleaner look */
+.leaflet-control-attribution {
+  font-size: 10px !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+}
