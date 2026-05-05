@@ -67,7 +67,10 @@
       "Bash(curl -s \"https://khlongsonmarina.com/\")",
       "Bash(vercel list *)",
       "Bash(curl -s -o /dev/null -w \"Site:        %{http_code}\\\\n\" https://khlongsonmarina.com/)",
-      "Bash(curl -s -o /dev/null -w \"Beach image: %{http_code}\\\\n\" \"https://khlongsonmarina.com/_next/image?url=%2Fimages%2F50905-35917.jpeg&w=1920&q=75\")"
+      "Bash(curl -s -o /dev/null -w \"Beach image: %{http_code}\\\\n\" \"https://khlongsonmarina.com/_next/image?url=%2Fimages%2F50905-35917.jpeg&w=1920&q=75\")",
+      "Bash(curl -s -o /dev/null -w \"Site:        %{http_code}\\\\n\" https://khlongsonmarina.com/tours)",
+      "Bash(curl -s -o /dev/null -w \"Cave image:  %{http_code}\\\\n\" \"https://khlongsonmarina.com/_next/image?url=%2Fimages%2Femerald%20cave.jpg&w=1920&q=75\")",
+      "Bash(curl -s \"https://khlongsonmarina.com/tours\")"
     ]
   }
 }

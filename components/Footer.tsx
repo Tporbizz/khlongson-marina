@@ -15,7 +15,7 @@ export default function Footer() {
             </span>
           </Link>
           <p className="mt-4 max-w-md text-sm leading-relaxed text-white/65">
-            {MARINA.shortDesc} Trang&apos;s first marina · Navily Partner · gateway to
+            {MARINA.shortDesc} Trang&apos;s first marina · Official Navily Partner · gateway to
             9 islands within 30 NM of the dock.
           </p>
 

@@ -56,7 +56,7 @@ export default function ContactPage() {
                   {MARINA.contact.navilyName}
                 </a>
                 <p className="text-xs text-[var(--color-navy-800)]/55 mt-1">
-                  First Navily Partner Marina in Trang Province.
+                  Official Navily Partner Marina — Thailand.
                 </p>
               </ContactItem>
 

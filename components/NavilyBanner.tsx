@@ -17,10 +17,10 @@ export default function NavilyBanner() {
             </span>
             <div>
               <span className="eyebrow text-[var(--color-gold-light)]">
-                Navily Partner Marina
+                Official Navily Partner Marina
               </span>
               <h3 className="heading-md mt-2 text-white leading-tight">
-                The first Navily Partner Marina in Trang Province.
+                Official Navily Partner Marina — Thailand.
               </h3>
               <p className="mt-2 text-sm text-white/70">
                 Listed on Navily — trusted by 1.1 million sailors worldwide.

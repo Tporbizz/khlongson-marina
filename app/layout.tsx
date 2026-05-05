@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: `%s | ${MARINA.name}`,
   },
   description:
-    "Trang's first yacht marina. Protected natural harbour, 9 islands within 30 NM including dugongs and the Emerald Cave. 60 NM from Langkawi. Navily Partner Marina.",
+    "Trang's first yacht marina. Protected natural harbour, 9 islands within 30 NM including dugongs and the Emerald Cave. 60 NM from Langkawi. Official Navily Partner Marina.",
   keywords: [
     "marina trang thailand",
     "yacht trang",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     siteName: MARINA.name,
     title: `${MARINA.name} — ${MARINA.tagline}`,
     description:
-      "Trang's first yacht marina. Protected natural harbour, 9 islands within 30 NM, 60 NM from Langkawi. Navily Partner.",
+      "Trang's first yacht marina. Protected natural harbour, 9 islands within 30 NM, 60 NM from Langkawi. Official Navily Partner.",
     images: [
       {
         url: "/images/drone1.jpg",

@@ -37,7 +37,7 @@ export const MARINA = {
     whatsapp: "+66 99 242 2655",
     whatsappLink: "https://wa.me/66992422655",
     navilyName: "Khlong Son Marina - Trang",
-    navily: "https://navily.com/marina/khlong-son-marina-trang",
+    navily: "https://www.navily.com/port/khlong-son-marina-trang/35387",
     website: "https://khlongsonmarina.com",
   },
 
@@ -80,7 +80,7 @@ export const MARINA = {
 export const SELLING_POINTS = [
   {
     title: "Trang's first marina",
-    body: "The first and only operating marina in Trang Province. Navily Partner Marina from day one.",
+    body: "The first and only operating marina in Trang Province. Official Navily Partner Marina from day one.",
   },
   {
     title: "Total natural protection",
